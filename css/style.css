@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Comic Neue', cursive;
+}
+
+body {
+    background-color: whitesmoke;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+}
+
+#app {
+    background: #2C5776;
+    border-radius: 10px;
+    border: 5px dashed rgba(255,255,255,0.2);
+    font-family: 'Comic Neue', cursive;
+}
+
+.backdrop {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+    position: absolute;
+    top: 30%;
+    z-index: 100;
+    width: 600px;
+    background: #2C5776;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    align-items: center;
+    justify-content: center;
+    animation: slideIn 0.5s ease-out forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform:translateY(100%);
+    }
+    to {
+        transform:translateY(0);
+    }
+}
+
+button, input {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+button {
+    background-color: whitesmoke;
+    color: #2C5776;
+    width: 200px;
+    font-size: 20px;
+}
+
+input {
+    border: 1px solid #ccc;
+    padding: 8px;
+    box-sizing: border-box;
+    display: block;
+}
+
+.form {
+    width: 100%;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.label {
+    font-size: 20px;
+}
+
+.error {
+    color: #ffffff;
+    font-size: 15px;
+}
